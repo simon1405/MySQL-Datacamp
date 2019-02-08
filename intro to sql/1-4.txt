@@ -1,0 +1,27 @@
+/*Count the number of rows in the people table.
+
+Count the number of (non-missing) birth dates in the people table.
+
+Count the number of unique birth dates in the people table.
+
+Count the number of unique languages in the films table.
+
+Count the number of unique countries in the films table.*/
+
+select count(*) from people;
+
+SELECT COUNT(birthdate)
+
+FROM people;
+
+SELECT COUNT(distinct birthdate)
+
+FROM people;
+
+SELECT COUNT(distinct language)
+
+FROM films;
+
+SELECT COUNT(distinct country)
+
+FROM films;

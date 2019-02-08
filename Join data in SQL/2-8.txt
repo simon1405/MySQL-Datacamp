@@ -1,0 +1,15 @@
+/*Create the cross join above and select only the city name AS city and language name AS language. (Recall that cross joins do not use ON or USING.)
+Make use of LIKE and Hyder% to choose Hyderabad in both countries.*/
+
+SELECT c.name AS city, l.name AS language
+FROM cities AS c        
+CROSS JOIN languages AS l
+WHERE c.name LIKE 'Hyder%';
+
+/*Use an inner join instead of a cross join. Think about what the difference will be in the results for this inner join result and the one for the cross join.*/
+
+SELECT c.name AS city, l.name AS language
+FROM cities AS c        
+inner JOIN languages AS l
+on l.code=c.country_code
+WHERE c.name LIKE 'Hyder%';

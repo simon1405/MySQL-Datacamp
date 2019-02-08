@@ -1,0 +1,21 @@
+/*Get the title of every film from the films table.
+
+Get the title and release year for every film.
+
+Get the title, release year and country for every film.
+
+Get all columns from the films table.*/
+
+select title from films;
+
+SELECT title,release_year
+
+FROM films;
+
+SELECT title, release_year, country
+
+FROM films;
+
+SELECT *
+
+FROM films;

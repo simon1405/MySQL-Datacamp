@@ -1,0 +1,19 @@
+/*Use the SUM function to get the total duration of all films.
+
+Get the average duration of all films.
+
+Get the duration of the shortest film.
+
+Get the duration of the longest film.*/
+
+select sum(duration) 
+from films;
+
+select avg(duration) 
+from films;
+
+select min(duration) 
+from films;
+
+select max(duration) 
+from films;

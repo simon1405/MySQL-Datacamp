@@ -1,0 +1,26 @@
+/*Get the birth date and name of people in the people table, in order of when they were born and alphabetically by name.
+
+Get the release year, duration, and title of films ordered by their release year and duration.
+
+Get certifications, release years, and titles of films ordered by certification (alphabetically) and release year.
+
+Get the names and birthdates of people ordered by name and birth date.*/
+
+select birthdate, name 
+from people 
+
+order by birthdate, name;
+
+select release_year, duration, title 
+from films
+
+order by release_year, duration;
+
+select certification, release_year, title 
+from films
+order by certification, release_year;
+
+select name, birthdate 
+from people
+
+order by name, birthdate;

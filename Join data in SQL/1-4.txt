@@ -1,0 +1,12 @@
+/*Inner join countries on the left and languages on the right with USING(code). Select the fields corresponding to:
+
+country name AS country,
+continent name,
+language name AS language, and
+whether or not the language is official.
+Remember to alias your tables using the first letter of their names.*/
+
+SELECT countries.name as country, continent, languages.name as language, official
+FROM countries
+INNER JOIN languages
+using(code)

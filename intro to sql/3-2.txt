@@ -1,0 +1,19 @@
+/*Use the SUM function to get the total amount grossed by all films.
+
+Get the average amount grossed by all films.
+
+Get the amount grossed by the worst performing film.
+
+Get the amount grossed by the best performing film.*/
+
+select sum(gross)
+from films;
+
+select avg(gross) 
+from films;
+
+select min(gross) 
+from films;
+
+select max(gross) 
+from films;

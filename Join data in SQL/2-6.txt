@@ -1,0 +1,26 @@
+/*Choose records in which countries.name starts with the capital letter 'V' or is NULL.
+Arrange by countries.name in ascending order to more clearly see the results.
+Repeat the same query as above but use a left join instead of a full join. Note what has changed compared to the full join result!
+
+Repeat once more, but use an inner join instead of a left join. Note what has changed compared to the full join and left join results.*/
+
+SELECT countries.name, code, languages.name AS language
+FROM languages
+full JOIN countries
+USING (code)
+WHERE countries.name LIKE 'V%' OR countries.name IS null
+ORDER BY countries.name;
+
+SELECT countries.name, code, languages.name AS language
+FROM languages
+left JOIN countries
+USING (code)
+WHERE countries.name LIKE 'V%' OR countries.name IS null
+ORDER BY countries.name;
+
+SELECT countries.name, code, languages.name AS language
+FROM languages
+inner JOIN countries
+USING (code)
+WHERE countries.name LIKE 'V%' OR countries.name IS null
+ORDER BY countries.name;

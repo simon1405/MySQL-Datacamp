@@ -1,0 +1,10 @@
+/*Select country name AS country, region, and life expectancy AS life_exp.
+Make sure to use LEFT JOIN, WHERE, ORDER BY, and LIMIT.*/
+
+select coun.name as country, coun.region, pop.life_expectancy as life_exp
+from countries as coun
+left join populations as pop
+on coun.code = pop.country_code
+where pop.year = 2010
+order by life_exp
+limit 5;

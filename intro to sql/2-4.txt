@@ -1,0 +1,23 @@
+/*Get the title and release year for films released in the 90s.*/
+
+select title, release_year from films
+
+where release_year>1989 and release_year<2000;
+
+/*Now, build on your query to filter the records to only include French or Spanish language films.*/
+
+select title, release_year from films
+
+where (release_year>1989 and release_year<2000) 
+
+and (language ='Spanish' or language='French');
+
+/*Finally, restrict the query to only return films that took in more than $2M gross.*/
+
+select title, release_year from films
+
+where (release_year>1989 and release_year<2000) 
+
+and (language ='Spanish' or language='French')
+
+and gross>2000000;

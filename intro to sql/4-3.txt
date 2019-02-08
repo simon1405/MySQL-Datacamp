@@ -1,0 +1,20 @@
+/*Get the IMDB score and film ID for every film from the reviews table, sorted from highest to lowest score.
+
+Get the title for every film, in reverse order.
+
+Get the title and duration for every film, in order of longest duration to shortest.*/
+
+select imdb_score, film_id 
+from reviews
+
+order by imdb_score desc;
+
+select title 
+from films
+
+order by title desc;
+
+select title, duration 
+from films
+
+order by duration desc;

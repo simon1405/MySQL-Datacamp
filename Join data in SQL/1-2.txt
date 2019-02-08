@@ -1,0 +1,12 @@
+/*Join the tables countries (left) and economies (right). What field do you need to use in ON to match the two tables?
+Alias countries AS c and economies AS e.
+From this join, SELECT:
+c.code, aliased as country_code.
+name, year, and inflation_rate, not aliased.*/
+
+SELECT c.code AS country_code, name, year, inflation_rate
+FROM countries AS c
+inner JOIN economies AS e
+ON c.code = e.code;
+
+

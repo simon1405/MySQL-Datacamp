@@ -1,0 +1,33 @@
+/*Perform an inner join. Alias the name of the country field as country and the name of the language field as language. Sort based on descending country name.
+
+Perform a left join instead of an inner join. Observe the result, and also note the change in the number of records in the result. Carefully review which records appear in the left join result, but not in the inner join result.*/
+
+/*
+select country name AS country, the country's local name,
+the language name AS language, and
+the percent of the language spoken in the country
+*/
+select c.name AS country, local_name, l.name AS language, percent
+-- countries on the left (alias as c)
+FROM countries AS c
+-- appropriate join with languages (as l) on the right
+inner JOIN languages AS l
+-- give fields to match on
+ON  l.code = c.code
+-- sort by descending country name
+ORDER BY country desc;
+
+/*
+select country name AS country, the country's local name,
+the language name AS language, and
+the percent of the language spoken in the country
+*/
+select c.name AS country, local_name, l.name AS language, percent
+-- countries on the left (alias as c)
+FROM countries AS c
+-- appropriate join with languages (as l) on the right
+left JOIN languages AS l
+-- give fields to match on
+ON  l.code = c.code
+-- sort by descending country name
+ORDER BY country desc;

@@ -1,0 +1,20 @@
+/*Get the names of people who are still alive, i.e. whose death date is missing.
+
+Get the title of every film which doesn't have a budget associated with it.
+
+Get the number of films which don't have a language associated with them.*/
+
+select name 
+from people 
+
+where deathdate is null;
+
+select title 
+from films
+
+where budget is null;
+
+select count(*) 
+from films
+
+where language is null;

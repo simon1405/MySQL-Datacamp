@@ -1,0 +1,13 @@
+/*Complete a full join with countries on the left and languages on the right.
+Next, full join this result with currencies on the right.
+Select the fields corresponding to the country name AS country, region, language name AS language, and basic and fractional units of currency.
+Use LIKE to choose the Melanesia and Micronesia regions (Hint: 'M%esia').*/
+
+SELECT c.name AS country, c.region,l.name AS language,
+       basic_unit, frac_unit
+FROM countries AS c
+FULL JOIN languages AS l
+USING (code)
+FULL JOIN currencies AS cu
+USING (code)
+WHERE c.region LIKE 'M%esia';
