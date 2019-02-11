@@ -1,2 +1,2 @@
 # MySQL-Datacamp
-# MySQL query practices and questions
+MySQL query practices and questions
